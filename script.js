@@ -71,39 +71,66 @@ const currencies = new Map([
   ['GBP', 'Pound sterling'],
 ]);
 
+/////////////////////////////////////////////////
+// // Lecture. 141 Simple Array Methods
+
+// let arr = ['a', 'b', 'c', 'd', 'e'];
+
+// // Slice
+// console.log(arr.slice(2));
+// console.log(arr.slice(2, 4));
+// console.log(arr.slice(-2));
+// console.log(arr.slice(-1));
+// console.log(arr.slice(1, -2));
+// console.log(arr.slice());
+// console.log(arr.slice([...arr]));
+
+// // Splice
+// // console.log(arr.splice(2));
+// arr.splice(-1);
+// console.log(arr);
+// arr.splice(1, 2);
+// console.log(arr);
+
+// // Reverse
+// arr = ['a', 'b', 'c', 'd', 'e'];
+// const arr2 = ['j', 'i', 'h', 'g', 'f'];
+// console.log(arr2.reverse());
+// console.log(arr2);
+
+// // Concat
+// const letters = arr.concat(arr2);
+// console.log(letters);
+// console.log([...arr, ...arr2]);
+
+// // Join
+// console.log(letters.join(' - '));
+
+//////////////////////////////////////////////
+// Lecture 142. Looping Arrays: forEach
+
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
-/////////////////////////////////////////////////
-// Lecture. 141 Simple Array Methods
+// for (const movement of movements) {
+for (const [i, movement] of movements.entries()) {
+  if (movement > 0) {
+    console.log(`Movement ${i + 1}: You deposited ${movement}`);
+  } else {
+    console.log(`Movement ${i + 1}: You withdrew ${Math.abs(movement)}`);
+  }
+}
 
-let arr = ['a', 'b', 'c', 'd', 'e'];
+console.log('------FOREACH------');
 
-// Slice
-console.log(arr.slice(2));
-console.log(arr.slice(2, 4));
-console.log(arr.slice(-2));
-console.log(arr.slice(-1));
-console.log(arr.slice(1, -2));
-console.log(arr.slice());
-console.log(arr.slice([...arr]));
+movements.forEach(function (mov, i) {
+  if (mov > 0) {
+    console.log(`Movement ${i + 1}: You deposited ${mov}`);
+  } else {
+    console.log(`Movement ${i + 1}: You withdrew ${Math.abs(mov)}`);
+  }
+});
 
-// Splice
-// console.log(arr.splice(2));
-arr.splice(-1);
-console.log(arr);
-arr.splice(1, 2);
-console.log(arr);
-
-// Reverse
-arr = ['a', 'b', 'c', 'd', 'e'];
-const arr2 = ['j', 'i', 'h', 'g', 'f'];
-console.log(arr2.reverse());
-console.log(arr2);
-
-// Concat
-const letters = arr.concat(arr2);
-console.log(letters);
-console.log([...arr, ...arr2]);
-
-// Join
-console.log(letters.join(' - '));
+// 0: function(200)
+// 1: function(450)
+// 2: function(400)
+// ...

@@ -260,17 +260,17 @@ checkDogs([9, 16, 6, 8, 3], [10, 5, 6, 1, 4]);
 // console.log(movements);
 // console.log(deposits);
 
-const depositsFor = [];
+// const depositsFor = [];
 
-for (const of movements) {
-  if (mov > 0) {
-    depositsFor.push(mov);
-  }
-};
-console.log(depositsFor);
+// for (const of movements) {
+//   if (mov > 0) {
+//     depositsFor.push(mov);
+//   }
+// };
+// console.log(depositsFor);
 
-const withdrawals = movements.filter(function (mov) {
-  mov < 0;
-});
+// const withdrawals = movements.filter(function (mov) {
+//   mov < 0;
+// });
 
-console.log(withdrawals);
+// console.log(withdrawals);

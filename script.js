@@ -93,7 +93,7 @@ const createUsernames = function (accs) {
   });
 };
 
-createUserNames(accounts);
+createUsernames(accounts);
 console.log(accounts);
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
@@ -229,6 +229,9 @@ checkDogs([3, 5, 2, 12, 7], [4, 1, 15, 8, 3]);
 checkDogs([9, 16, 6, 8, 3], [10, 5, 6, 1, 4]);
 */
 
+/////////////////////////////////////////////////
+// Lecture 148. The Map Method
+
 // const euroToUsd = 1.1;
 
 // // const movementsUSD = movements.map(function (mov) {
@@ -254,6 +257,9 @@ checkDogs([9, 16, 6, 8, 3], [10, 5, 6, 1, 4]);
 
 // console.log(movementsDescriptions);
 
+/////////////////////////////////////////////////////
+// Lecture 150. The Filter Method
+
 // const deposits = movements.filter(function (mov) {
 //   mov > 0;
 // });
@@ -274,3 +280,13 @@ checkDogs([9, 16, 6, 8, 3], [10, 5, 6, 1, 4]);
 // });
 
 // console.log(withdrawals);
+
+//////////////////////////////////////////////////////
+// Lecture 151. The Reduce Method
+
+console.log(movements);
+
+// Accumulator -> SNOWBALL
+const balance = movements.reduce(function (acc, cur, i, arr) {
+  return acc + cur;
+});

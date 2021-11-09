@@ -95,6 +95,7 @@ const createUsernames = function (accs) {
 
 createUsernames(accounts);
 console.log(accounts);
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
@@ -137,7 +138,7 @@ console.log(accounts);
 //////////////////////////////////////////////
 // Lecture 142. Looping Arrays: forEach
 
-// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 // // for (const movement of movements) {
 // for (const [i, movement] of movements.entries()) {
@@ -260,10 +261,10 @@ checkDogs([9, 16, 6, 8, 3], [10, 5, 6, 1, 4]);
 /////////////////////////////////////////////////////
 // Lecture 150. The Filter Method
 
-// const deposits = movements.filter(function (mov) {
-//   mov > 0;
-// });
-// console.log(movements);
+const deposits = movements.filter(function (mov) {
+  mov > 0;
+});
+console.log(movements);
 // console.log(deposits);
 
 // const depositsFor = [];
@@ -288,5 +289,7 @@ console.log(movements);
 
 // Accumulator -> SNOWBALL
 const balance = movements.reduce(function (acc, cur, i, arr) {
+  console.log(`Iteration ${i}: ${acc}`);
   return acc + cur;
-});
+}, 100);
+console.log(balance);

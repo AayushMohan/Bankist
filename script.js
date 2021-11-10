@@ -83,6 +83,12 @@ const displayMovements = function (movements) {
 
 displayMovements(account1.movements);
 
+const calcDisplayBalance = function (movements) {
+  const balance = movements.reduce((acc, mov) => acc + mov, 0);
+  labelBalance.textContent = `${balance} EUR`;
+};
+calcDisplayBalance(account1.movements);
+
 const createUsernames = function (accs) {
   accs.forEach(function (acc) {
     acc.username = acc.owner
@@ -94,7 +100,6 @@ const createUsernames = function (accs) {
 };
 
 createUsernames(accounts);
-console.log(accounts);
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
@@ -288,8 +293,15 @@ console.log(movements);
 console.log(movements);
 
 // Accumulator -> SNOWBALL
-const balance = movements.reduce(function (acc, cur, i, arr) {
-  console.log(`Iteration ${i}: ${acc}`);
-  return acc + cur;
-}, 100);
+const balance = movements.reduce((acc, cur) => acc + cur, 0);
 console.log(balance);
+
+let balance2 = 0;
+for (const mov of movements) balance2 += mov;
+console.log(balance2);
+
+// const balance3 = movements.reduce((acc, cur) => acc + cur, 100);
+// console.log(balance3);
+
+// const balance4 = movements.reduce((acc, cur) => acc + cur, 0);
+// console.log(balance4);{

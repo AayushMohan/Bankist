@@ -266,10 +266,10 @@ checkDogs([9, 16, 6, 8, 3], [10, 5, 6, 1, 4]);
 /////////////////////////////////////////////////////
 // Lecture 150. The Filter Method
 
-const deposits = movements.filter(function (mov) {
-  mov > 0;
-});
-console.log(movements);
+// const deposits = movements.filter(function (mov) {
+//   mov > 0;
+// });
+// console.log(movements);
 // console.log(deposits);
 
 // const depositsFor = [];
@@ -290,15 +290,15 @@ console.log(movements);
 //////////////////////////////////////////////////////
 // Lecture 151. The Reduce Method
 
-console.log(movements);
+// console.log(movements);
 
 // Accumulator -> SNOWBALL
-const balance = movements.reduce((acc, cur) => acc + cur, 0);
-console.log(balance);
+// const balance = movements.reduce((acc, cur) => acc + cur, 0);
+// console.log(balance);
 
-let balance2 = 0;
-for (const mov of movements) balance2 += mov;
-console.log(balance2);
+// let balance2 = 0;
+// for (const mov of movements) balance2 += mov;
+// console.log(balance2);
 
 // const balance3 = movements.reduce((acc, cur) => acc + cur, 100);
 // console.log(balance3);

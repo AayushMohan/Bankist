@@ -304,4 +304,10 @@ checkDogs([9, 16, 6, 8, 3], [10, 5, 6, 1, 4]);
 // console.log(balance3);
 
 // const balance4 = movements.reduce((acc, cur) => acc + cur, 0);
-// console.log(balance4);{
+// console.log(balance4);
+
+// const max = movements.reduce((acc, mov) => {
+//   if (acc > mov) return acc;
+//   else return mov;
+// }, movements[0]);
+// console.log(max);

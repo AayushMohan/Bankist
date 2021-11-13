@@ -143,7 +143,7 @@ createUsernames(accounts);
 //////////////////////////////////////////////
 // Lecture 142. Looping Arrays: forEach
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 // // for (const movement of movements) {
 // for (const [i, movement] of movements.entries()) {
